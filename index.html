@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DoctorSaathi - Online Appointment Booking</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Header -->
+    <header class="mb-10 text-center">
+      <h1 class="text-4xl font-bold text-blue-800 mb-3">DoctorSaathi Healthcare</h1>
+      <p class="text-lg text-gray-600">Book appointments with India's finest doctors</p>
+    </header>
+
+    <!-- Search & Filter -->
+    <div class="mb-8 bg-white p-6 rounded-xl shadow-sm">
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="flex-1 relative">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search doctors by name or specialization..."
+            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+        <select
+          id="specialization-filter"
+          class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700 bg-white"
+        >
+          <option value="">All Specializations</option>
+          <option value="Cardiology">Heart Specialist</option>
+          <option value="Dermatology">Skin Specialist</option>
+          <option value="Neurology">Brain Specialist</option>
+          <option value="Pediatrics">Child Specialist</option>
+          <option value="Orthopedics">Bone Specialist</option>
+          <option value="Ayurveda">Ayurveda Doctor</option>
+          <option value="Homeopathy">Homeopathy Doctor</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Doctor Cards -->
+    <div id="doctors-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"></div>
+
+    <!-- Modal for Booking -->
+    <div id="doctor-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden z-50 overflow-y-auto h-full w-full">
+      <!-- Modal content injected dynamically -->
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden z-50 overflow-y-auto h-full w-full">
+      <!-- Confirmation content injected dynamically -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
